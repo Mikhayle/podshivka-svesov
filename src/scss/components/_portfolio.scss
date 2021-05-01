@@ -1,0 +1,34 @@
+.portfolio {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    height: 710px;
+    overflow: hidden;
+
+    @include mobile {
+      height: auto;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    height: calc( (100% - 30px) / 2 );
+
+    @include mobile {
+      margin-top: 0 !important;
+
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+}

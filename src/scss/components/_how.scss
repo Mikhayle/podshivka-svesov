@@ -1,0 +1,119 @@
+.how {
+  padding-top: 30px;
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1300px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.how-item {
+  flex: 0 0 14%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media screen and (max-width: 1300px) {
+    flex: 0 0 30%;
+    margin-bottom: 64px;
+  }
+
+  @include mobile {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+
+    &::after {
+      content: none !important;
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: url("../img/arrow.svg");
+      display: inline-block;
+      position: absolute;
+      right: -30px;
+      top: 50%;
+
+      @media screen and (max-width: 1300px) {
+        content: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    &:not(:nth-child(3n)) {
+      &::after {
+        content: url("../img/arrow.svg");
+        display: inline-block;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+      }
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    &--phone {
+      background-image: url('../img/how-phone.png');
+    }
+
+    &--get-size {
+      background-image: url('../img/how-get-size.png');
+    }
+
+    &--list {
+      background-image: url('../img/how-list.png');
+    }
+
+    &--hand {
+      background-image: url('../img/how-hand.png');
+    }
+
+    &--delivery {
+      background-image: url('../img/how-delivery.png');
+    }
+
+    &--setup {
+      background-image: url('../img/how-setup.png');
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #202831;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #202831;
+  }
+}

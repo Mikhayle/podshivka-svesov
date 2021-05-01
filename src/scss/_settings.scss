@@ -1,0 +1,172 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.is-outer {
+	position: relative !important; // stylelint-disable-line declaration-no-important
+	left: -9999px !important; // stylelint-disable-line declaration-no-important
+}
+
+.site-container {
+	overflow: hidden;
+}
+
+.is-hidden {
+	display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.for-mobile {
+	display: none;
+
+	@include mobile {
+		display: block;
+	}
+}
+
+.error {
+	border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+}
+
+.scroll-off {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.btn-reset {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 25px;
+	max-width: 1400px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.scroll-off {
+	overflow-y: hidden;
+	height: 100vh;
+}
+
+.btn-primary {
+	width: 275px;
+	height: 66px;
+	color: #fff;
+	background-color: var(--color-red);
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 140%;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+	@include desktop {
+		&:hover {
+			background-color: #fff;
+			color: var(--color-red);
+			border: 1px solid var(--color-red);
+			transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+		}
+	}
+}
+
+.btn-secondary {
+	width: 223px;
+	height: 66px;
+	border: 2px solid var(--color-dark-blue);
+	background: transparent;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 140%;
+	color: var(--color-dark-blue);
+	cursor: pointer;
+	transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+	@include desktop {
+		&:hover {
+			background-color: var(--color-dark-blue);
+			color: var(--color-white);
+			border: 2px solid transparent;
+			transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+		}
+	}
+}
+
+.main-title {
+	margin-bottom: 20px;
+	font-family: "Oswald", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 150%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--color-dark-blue);
+}
+
+.title {
+	font-family: "Oswald", sans-serif;
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 145%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: var(--color-blue);
+
+	@include mobile {
+		font-size: 20px;
+	}
+}

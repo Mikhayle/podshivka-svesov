@@ -1,0 +1,124 @@
+@import "../mixins";
+
+.services {
+	margin-bottom: 100px;
+
+	&__content {
+		margin-bottom: 50px;
+	}
+
+	.swiper-wrapper {
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include mobile {
+			flex-wrap: nowrap;
+			justify-content: start;
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__btn-more {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.card {
+	width: 31.5%;
+	flex-shrink: 0;
+	margin-bottom: 30px;
+
+	@media screen and (max-width: 1220px) {
+		width: 49%;
+	}
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+
+	&__img {
+		position: relative;
+		height: 212px;
+		border-radius: 10px 10px 0 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px 10px 0 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		@include desktop {
+			&:hover > .card__price {
+				opacity: 1;
+				transition: opacity 0.3s ease-in-out;
+			}
+		}
+
+		&--svesy::after {
+			background-image: url("../img/services-1.jpg");
+		}
+
+		&--water-out::after {
+			background-image: url("../img/services-2.jpg");
+		}
+
+		&--vinyl::after {
+			background-image: url("../img/services-3.jpg");
+		}
+
+		&--metal::after {
+			background-image: url("../img/services-4.jpg");
+		}
+
+		&--terassa::after {
+			background-image: url("../img/services-5.jpg");
+		}
+	}
+
+	&__price {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(41, 54, 69, 0.5);
+		border-radius: 10px 10px 0 0;
+		backdrop-filter: blur(4px);
+		color: #fff;
+		font-weight: 600;
+		font-size: 35px;
+		line-height: 140%;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&__info {
+		padding: 24px 20px;
+		background-color: var(--color-dark-blue);
+		color: #fff;
+		border-radius: 0 0 10px 10px;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 140%;
+
+		@include mobile {
+			font-size: 18px;
+			line-height: 21px;
+		}
+	}
+}

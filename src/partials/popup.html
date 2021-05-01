@@ -1,0 +1,26 @@
+<div class="popup-container">
+	<div class="popup">
+		<button class="popup__close">
+			<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1.021 1.0205L19.4058 19.4053M1.021 19.4053L19.4058 1.0205" stroke="black" stroke-width="2"
+					stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<form action="telegram.php" method="POST" class="popup__form">
+			<h3 class="popup__form-title">
+				Давайте созвонимся
+			</h3>
+			<p class="popup__form-text">
+				Оставьте номер телефона
+				и мы перезвоним в течение 1 часа
+			</p>
+			<input type="text" class="popup__input" data-validate-field="name" name="name" placeholder="Представтесь*">
+			<input type="tel" class="popup__input input-tel" data-validate-field="tel" name="phone"
+				placeholder="Номер телефона*">
+			<input type="submit" class="btn-primary popup__form-btn" value="Заказать звонок">
+			<p class="popup__form-agreement">
+				Отправляя запрос, вы соглашаетесь с нашей политикой конфиденциальности
+			</p>
+		</form>
+	</div>
+</div>

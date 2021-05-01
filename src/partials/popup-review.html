@@ -1,0 +1,30 @@
+<div class="popup-container-review">
+	<div class="popup-review">
+		<button class="popup__close">
+			<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1.021 1.0205L19.4058 19.4053M1.021 19.4053L19.4058 1.0205" stroke="black" stroke-width="2"
+					stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<form action="telegram.php" method="POST" class="popup-review__form">
+			<h2 class="popup-review__title">
+				Оставьте отзыв
+			</h2>
+			<div class="popup-review__body">
+				<label class="popup-review__file">
+					<input type="file">
+					<img src="img/ava-icognito.png" alt="загрузите фото">
+					<span>Загрузите фото</span>
+				</label>
+				<div class="popup-review__inputs-block">
+					<input type="text" class="popup-review__input" data-validate-field="name" name="name"
+						placeholder="Представтесь*">
+					<textarea name="comment" data-validate-field="comment" cols="30" rows="10" class="popup-review__comment"
+						placeholder="Поделитесь своим впечатлением*"></textarea>
+				</div>
+			</div>
+			<input type="submit" class="btn-primary popup-review__form-btn" value="Отправить">
+
+		</form>
+	</div>
+</div>

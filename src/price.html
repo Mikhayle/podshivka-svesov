@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+	<title>Услуги и цены | Подшивка свесов в Санкт-Петербурге и Ленинградской области</title>
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/price-services.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=3f0cb570-4a28-4ec2-b0d8-606d09b88e25&lang=ru_RU"
+		type="text/javascript">
+		</script>
+	<script type="text/javascript">
+		ymaps.ready(init);
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				center: [60.178766, 30.364320],
+				zoom: 15
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="site-container">
+		@include('partials/popup.html')
+		@include('partials/popup-thanks.html')
+		@include('partials/header.html')
+		<main class="main">
+			<h1 class="main-title visually-hidden">
+				выполним подшивку свесов в СПБ и Лен. области
+			</h1>
+			@include('partials/table-price.html')
+			@include('partials/contacts.html')
+		</main>
+		@include('partials/footer.html')
+
+	</div>
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

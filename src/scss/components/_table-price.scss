@@ -1,0 +1,111 @@
+.main {
+	&-title--price {
+		
+	}
+	&__title {
+		margin: 0;
+		margin-bottom: 30px;
+		font-family: "Oswald", sans-serif;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: var(--color-blue);
+
+		@include tablet {
+			font-size: 30px;
+			line-height: 45px;
+		}
+
+		@include mobile {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+}
+
+.table {
+	margin-bottom: 50px;
+	border-collapse: collapse;
+	width: 100%;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+
+	@include mobile {
+		font-size: 15px;
+		line-height: 21px;
+	}
+
+	&__title {
+		text-align: left;
+		margin-bottom: 20px;
+		font-family: "Oswald", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: var(--color-blue);
+
+		@include tablet {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		@include mobile {
+			font-size: 18px;
+			line-height: 27px;
+		}
+	}
+
+	&__body {
+		filter: drop-shadow(10px 10px 25px rgba(15, 76, 130, 0.15));
+	}
+
+	&__row {
+		box-shadow: inset 0px -1px 0px #202831;
+		&--dark {
+			background: #f3f3f8;
+		}
+	}
+
+	&__col {
+		padding: 12px 0;
+
+		&--service {
+			padding-left: 40px;
+			width: 70%;
+
+			@include tablet {
+				padding-left: 20px;
+			}
+		}
+
+		&--unit {
+			text-align: center;
+			width: 10%;
+		}
+
+		&--price {
+			text-align: center;
+			width: 20%;
+		}
+	}
+}
+
+.service {
+	width: 70%;
+}
+
+.unit {
+	width: 10%;
+	text-align: center;
+}
+
+.price {
+	width: 20%;
+	text-align: center;
+}

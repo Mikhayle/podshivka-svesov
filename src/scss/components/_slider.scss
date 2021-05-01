@@ -1,0 +1,128 @@
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    content: none;
+  }
+
+  background-image: url('../img/arrow-dark.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--hero {
+    @media screen and (max-width: 1480px) {
+      display: none;
+    }
+  }
+
+  &--portfolio {
+    @media screen and (max-width: 1480px) {
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-white);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--reviews {
+    @media screen and (max-width: 1440px) {
+      left: auto !important;
+      top: auto !important;
+      bottom: -103px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  left: -35px;
+
+  &--portfolio {
+    @media screen and (max-width: 1480px) {
+      left: 0;
+    }
+  }
+
+  &--reviews {
+    @media screen and (max-width: 1440px) {
+      right: 60px;
+    }
+  }
+}
+
+.swiper-button-next {
+  right: -35px;
+
+  &--portfolio {
+    @media screen and (max-width: 1480px) {
+      right: 0;
+    }
+  }
+
+  &--reviews {
+    @media screen and (max-width: 1440px) {
+      right: 0;
+    }
+  }
+}
+
+.swiper-scrollbar {
+  position: absolute;
+  left: 50% !important;
+  width: 366px !important;
+  height: 2px !important;
+  transform: translateX(-50%);
+  background-color: #bababa;
+
+  @include mobile {
+    width: 280px !important;
+  }
+
+  &-drag {
+    height: 4px;
+    background-color: var(--color-blue);
+  }
+
+  &--hero {
+    bottom: -10px;
+    display: none;
+
+    @media screen and (max-width: 576px) {
+      display: block;
+      bottom: 80px;
+    }
+  }
+
+  &--services {
+    bottom: 128px;
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &--portfolio {
+    bottom: -30px;
+
+    @include mobile {
+      bottom: -10px;
+    }
+  }
+
+  &--reviews {
+    display: none;
+    bottom: -30px;
+
+    @include tablet {
+      display: block;
+      bottom: -10px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.partners {
+  margin-bottom: 100px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 0 31.5%;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 25px rgba(15, 76, 130, 0.15);
+    border-radius: 10px;
+
+    & > img {
+      width: 100%;
+    }
+
+    @include tablet {
+      flex: 0 0 48%;
+    }
+
+    @include mobile {
+      flex: 0 0 100%;
+    }
+  }
+}
